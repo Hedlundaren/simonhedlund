@@ -40,12 +40,22 @@ export const bands: SiteLink[] = [
     name: "Synkopter",
     href: "https://synkopter.se",
   },
+  {
+    name: "Railbirds",
+    href: "https://instagram.com/railbirdsband",
+    label: "Instagram",
+  },
 ];
 
 export const projects: ProjectLink[] = [
   {
     slug: "tempos",
     name: "Tempos",
+  },
+  {
+    slug: "giftunwrapper",
+    name: "Gift Unwrapper",
+    href: "https://giftunwrapper.com",
   },
 ];
 
