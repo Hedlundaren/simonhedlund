@@ -8,13 +8,13 @@ Add an entry to `bands` or `companies`. It shows up on the homepage and links st
 
 ## Add a short URL
 
-Add an entry to `projects`. With an `href`, `simonhedlund.com/tempos` redirects there. Without one, the path is a page on this site, like `/tempos`.
+Add an entry to `projects`. With an `href`, that path redirects to the live site, so updates there show up here. Without an `href`, the path is a page on this site.
 
 ```ts
 {
   slug: "tempos",
   name: "Tempos",
-  href: "https://example.com",
+  href: "https://tempos-dun.vercel.app",
 }
 ```
 

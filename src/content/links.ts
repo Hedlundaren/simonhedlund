@@ -51,6 +51,7 @@ export const projects: ProjectLink[] = [
   {
     slug: "tempos",
     name: "Tempos",
+    href: "https://tempos-dun.vercel.app",
   },
   {
     slug: "giftunwrapper",
