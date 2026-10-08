@@ -1,6 +1,7 @@
 import { projects } from "@/content/links";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { TemposFrame } from "./tempos-frame";
 
 const tempos = projects.find((project) => project.slug === "tempos");
 
@@ -12,11 +13,5 @@ export const metadata: Metadata = {
 export default function TemposPage() {
   if (!tempos?.embed) notFound();
 
-  return (
-    <iframe
-      src={tempos.embed}
-      title={tempos.name}
-      className="fixed inset-0 block h-dvh w-full border-0 bg-[#14110e]"
-    />
-  );
+  return <TemposFrame embed={tempos.embed} title={tempos.name} />;
 }
