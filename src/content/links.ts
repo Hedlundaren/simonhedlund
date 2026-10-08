@@ -58,6 +58,11 @@ export const projects: ProjectLink[] = [
     name: "Gift Unwrapper",
     href: "https://giftunwrapper.com",
   },
+  {
+    slug: "chords",
+    name: "Chords",
+    href: "https://chords.simonhedlund.com",
+  },
 ];
 
 const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
