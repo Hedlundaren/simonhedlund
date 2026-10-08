@@ -66,8 +66,8 @@ export default function Home() {
           <LinkList
             links={projects.map((project) => ({
               name: project.name,
-              href: `/${project.slug}`,
-              label: `/${project.slug}`,
+              href: project.href ?? `/${project.slug}`,
+              label: project.href ? undefined : `/${project.slug}`,
             }))}
           />
         </Section>

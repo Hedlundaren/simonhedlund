@@ -11,11 +11,6 @@ export type ProjectLink = {
   name: string;
   /** Where that path redirects. Leave this out for a page that lives on this site. */
   href?: string;
-  /**
-   * Show this site at the short path without changing the address.
-   * The browser stays on simonhedlund.com/tempos and loads the latest version.
-   */
-  embed?: string;
   /** 308 when true. Defaults to a temporary 307 so the destination can change. */
   permanent?: boolean;
 };
@@ -56,7 +51,7 @@ export const projects: ProjectLink[] = [
   {
     slug: "tempos",
     name: "Tempos",
-    embed: "https://tempos-dun.vercel.app",
+    href: "https://tempos.simonhedlund.com",
   },
   {
     slug: "giftunwrapper",
