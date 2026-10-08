@@ -49,6 +49,18 @@ export default function Home() {
         Simon Hedlund
       </h1>
 
+      {projects.length > 0 && (
+        <Section title="Tools">
+          <LinkList
+            links={projects.map((project) => ({
+              name: project.name,
+              href: project.href ?? `/${project.slug}`,
+              label: project.href ? undefined : `/${project.slug}`,
+            }))}
+          />
+        </Section>
+      )}
+
       {companies.length > 0 && (
         <Section title="Companies">
           <LinkList links={companies} />
@@ -58,18 +70,6 @@ export default function Home() {
       {bands.length > 0 && (
         <Section title="Bands">
           <LinkList links={bands} />
-        </Section>
-      )}
-
-      {projects.length > 0 && (
-        <Section title="Projects">
-          <LinkList
-            links={projects.map((project) => ({
-              name: project.name,
-              href: project.href ?? `/${project.slug}`,
-              label: project.href ? undefined : `/${project.slug}`,
-            }))}
-          />
         </Section>
       )}
     </main>
