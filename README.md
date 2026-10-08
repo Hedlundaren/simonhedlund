@@ -8,7 +8,7 @@ Add an entry to `bands` or `companies`. It shows up on the homepage and links st
 
 ## Add a short URL
 
-Add an entry to `projects`. This makes `simonhedlund.com/tempos` redirect to the `href`:
+Add an entry to `projects`. With an `href`, `simonhedlund.com/tempos` redirects there. Without one, the path is a page on this site, like `/tempos`.
 
 ```ts
 {

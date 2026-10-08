@@ -1,0 +1,84 @@
+.tempos {
+  color-scheme: dark;
+  --background: #14110e;
+  --foreground: #f4efe6;
+  --card: #221e18;
+  --muted: #a39888;
+  --line: rgba(244, 239, 230, 0.1);
+  --accent: #e8923a;
+  background:
+    radial-gradient(900px 420px at 50% -12%, rgba(232, 146, 58, 0.16), transparent 60%),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+}
+
+.tempos button,
+.tempos input {
+  touch-action: manipulation;
+}
+
+.tempo-slider {
+  appearance: none;
+  height: 2.75rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+.tempo-slider:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.tempo-slider::-webkit-slider-runnable-track {
+  height: 0.35rem;
+  border-radius: 999px;
+  background: rgba(244, 239, 230, 0.16);
+}
+
+.tempo-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-top: -0.7rem;
+  border: 2px solid #1a120c;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.tempo-slider::-moz-range-track {
+  height: 0.35rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(244, 239, 230, 0.16);
+}
+
+.tempo-slider::-moz-range-thumb {
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 2px solid #1a120c;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+@keyframes bob-flash {
+  0% {
+    transform: scale(1.22);
+    filter: brightness(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+
+.bob-flash {
+  animation: bob-flash 150ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bob-flash {
+    animation: none;
+  }
+}

@@ -27,7 +27,7 @@ function LinkList({ links }: { links: SiteLink[] }) {
           <a
             href={link.href}
             rel="noreferrer"
-            className="group flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-3 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-foreground"
+            className="group grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-x-6 py-3 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-foreground"
           >
             <span className="underline decoration-transparent underline-offset-4 transition-colors group-hover:decoration-foreground">
               {link.name}

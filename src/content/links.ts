@@ -9,8 +9,8 @@ export type ProjectLink = {
   /** Path without a leading slash. "tempos" becomes simonhedlund.com/tempos */
   slug: string;
   name: string;
-  /** Where that path redirects. */
-  href: string;
+  /** Where that path redirects. Leave this out for a page that lives on this site. */
+  href?: string;
   /** 308 when true. Defaults to a temporary 307 so the destination can change. */
   permanent?: boolean;
 };
@@ -46,7 +46,6 @@ export const projects: ProjectLink[] = [
   {
     slug: "tempos",
     name: "Tempos",
-    href: "https://github.com/Hedlundaren/tempos",
   },
 ];
 
@@ -61,9 +60,15 @@ for (const project of projects) {
 }
 
 export function projectRedirects() {
-  return projects.map((project) => ({
-    source: `/${project.slug}`,
-    destination: project.href,
-    permanent: project.permanent ?? false,
-  }));
+  return projects.flatMap((project) =>
+    project.href
+      ? [
+          {
+            source: `/${project.slug}`,
+            destination: project.href,
+            permanent: project.permanent ?? false,
+          },
+        ]
+      : [],
+  );
 }
