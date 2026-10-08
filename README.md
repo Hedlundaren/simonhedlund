@@ -8,13 +8,15 @@ Add an entry to `bands` or `companies`. It shows up on the homepage and links st
 
 ## Add a short URL
 
-Add an entry to `projects`. With an `href`, that path redirects to the live site, so updates there show up here. Without an `href`, the path is a page on this site.
+Add an entry to `projects`.
+
+`embed` keeps the address on this site and loads the latest version of the other site. `href` redirects the browser there. Without either, the path is a page on this site.
 
 ```ts
 {
   slug: "tempos",
   name: "Tempos",
-  href: "https://tempos-dun.vercel.app",
+  embed: "https://tempos-dun.vercel.app",
 }
 ```
 
